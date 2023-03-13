@@ -1,4 +1,4 @@
-# Awesome-books-project
+# JavaScript-capstone-group-project
 
 <a name="readme-top"></a>
 
