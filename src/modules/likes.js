@@ -12,6 +12,7 @@ const addLike = async (index) => {
     });
 
     const data = await response.text()
+    return data;
 }
 
 
