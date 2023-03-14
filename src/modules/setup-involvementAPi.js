@@ -16,4 +16,6 @@ const createApp = async () => {
 
 // createApp();
 
-appId = 'JIjFwoEkLZESIoGzrK2r';
+const appId = 'JIjFwoEkLZESIoGzrK2r';
+
+export {involvementAPIURL, appId}
