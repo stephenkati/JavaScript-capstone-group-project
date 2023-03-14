@@ -1,5 +1,6 @@
 import './style.css';
 import {getPokemon, pokemonList} from './modules/getPokemon.js';
+import showPopup, {closePopup}from './modules/comment-popup';
 import { addLike, getLike } from './modules/likes.js'
 
 const onLoad =(() => { 
@@ -17,3 +18,7 @@ document.querySelector('#cardLayout').addEventListener('click', (e) => {
         onLoad()
     }
 }) 
+
+
+showPopup()
+closePopup()

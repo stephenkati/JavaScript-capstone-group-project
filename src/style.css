@@ -49,3 +49,56 @@ body {
   width: 20%;
   min-width: 200px;
 }
+
+/* comment Popup style*/
+
+#popup-window {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(0, 0, 0, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#close-btn {
+  position: absolute;
+  top: 12%;
+  right: 12%;
+  cursor: pointer;
+}
+
+.card-popup {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-popup .pokemonTitle{
+  font-size: 28px;
+}
+
+.card-popup img{
+  width: 30%;
+  border: double gray
+}
+
+.card
+
+.pokemonInfo p{
+  font-size: 20px;
+}
+
+#pokemonInfos {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20%;
+}
+
