@@ -16,3 +16,20 @@ const addComment = async () => {
     const data = await response.text()
     return data;
 }
+
+const populateComment = (data) => {
+
+  const cardPopup = document.querySelector('.card-popup')
+  const commentSection = document.createElement('div')
+  commentSection.className = '.comments'
+  commentSection.innerHTML = `<h2>Comments(2)</h2>`
+  data.forEach((element) => {
+    commentSection.innerHTML += `
+      <p>
+        ${element.creation_date} ${element.username} : ${element.comment}
+      </p>
+      `
+  });
+  
+  cardPopup.appendChild(commentSection)
+} 
