@@ -22,9 +22,15 @@ const commentPopup = (data) => {
   body.appendChild(commentPopup)
 } 
 
-const get = async (target) => {
+const getData = async (target) => {
   const pokemon = target.children[0].alt
   const response = await fetch(`${pokeAPI}${pokemon}`)
   const data = await response.json()
   commentPopup(data)
+}
+
+export default () => {
+  document.querySelector('#cardLayout').addEventListener('click', (e) => {
+    getData(e.target.parentElement)
+  })
 }
