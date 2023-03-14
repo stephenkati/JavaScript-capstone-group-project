@@ -32,7 +32,6 @@ const getLike = async (index) => {
             likes.innerHTML = `${element.likes} likes`
         }
     });
-
 }
 
 export { addLike, getLike }
