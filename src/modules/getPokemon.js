@@ -9,7 +9,7 @@ const getPokemon = async (pokemon, index) => {
         <div class="card" id="${index}">
             <img src=${data.sprites.front_default} alt=${data.name}>
             <p class="pokemonTitle" > ${data.name} </p>
-            <p>2 likes</p>
+            <p id='likes-${index}' > </p>
             <button>Comment</button>
             <button>Reservations</button>
         </div>
