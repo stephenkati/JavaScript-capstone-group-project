@@ -3,6 +3,7 @@ import {getPokemon, pokemonList} from './modules/getPokemon.js';
 import showPopup, {closePopup}from './modules/comment-popup.js';
 import { addLike, getLike } from './modules/likes.js'
 import callComment from './modules/display-comment.js';
+import { countItems } from './modules/itemCounter.js';
 
 const onLoad =(() => { 
     pokemonList.forEach((pokemon, index) => {
@@ -25,3 +26,5 @@ showPopup()
 closePopup()
 
 callComment()
+
+countItems()
