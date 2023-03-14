@@ -42,3 +42,5 @@ const closePopup = () => {
     }
   })
 } 
+
+export {closePopup}
