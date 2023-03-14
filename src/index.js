@@ -6,6 +6,8 @@ import callComment from './modules/display-comment.js';
 import { countItems } from './modules/itemCounter.js';
 
 const onLoad =(() => { 
+    const cardLayout = document.querySelector('#cardLayout');
+    cardLayout.innerHTML = ``
     pokemonList.forEach((pokemon, index) => {
     getPokemon(pokemon, index)
     getLike(index)
