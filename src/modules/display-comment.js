@@ -8,8 +8,8 @@ const addComment = async () => {
         },
         body: JSON.stringify({
             item_id: '1',
-            username: "mike",
-            comment: "hello micronaut"
+            username: "peter",
+            comment: "nice to meet you"
         }),
     });
 
@@ -22,14 +22,16 @@ const populateComment = (data) => {
   const cardPopup = document.querySelector('.card-popup')
   const commentSection = document.createElement('div')
   commentSection.className = '.comments'
-  commentSection.innerHTML = `<h2>Comments(2)</h2>`
-  data.forEach((element) => {
-    commentSection.innerHTML += `
-      <p>
-        ${element.creation_date} ${element.username} : ${element.comment}
-      </p>
-      `
-  });
+  commentSection.innerHTML = `<h2>Comments(0)</h2>`
+  if (data) {
+    data.forEach((element) => {
+      commentSection.innerHTML += `
+        <p>
+          ${element.creation_date} ${element.username} : ${element.comment}
+        </p>
+        `
+    });
+  }
   
   cardPopup.appendChild(commentSection)
 } 
@@ -45,7 +47,9 @@ const getComment = async (index) => {
   });
 
   const data = await response.json();
-  console.log(data)
+  if(data.error) {
+    populateComment([])
+  }
   populateComment(data)
 
 }
