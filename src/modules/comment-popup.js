@@ -10,7 +10,7 @@ const commentPopup = (data) => {
   <div class="card-popup" id="card-${0}">
   <i id=close-btn class="fa-regular fa-x"></i>
     <img src=${data.sprites.front_default} alt=${data.name}>
-    <p class="pokemonTitle" > ${data.name} </p>
+    <h2 class="pokemonTitle" > ${data.name} </h2>
     <div id="pokemonInfos">
       <p class="pokemonInfo" >Base experience : ${data.base_experience}</p>
       <p class="pokemonInfo" >Type : ${data.types[0].type.name}</p>
@@ -31,7 +31,9 @@ const getData = async (target) => {
 
 export default () => {
   document.querySelector('#cardLayout').addEventListener('click', (e) => {
-    getData(e.target.parentElement)
+    if (e.target.textContent === 'Comment') {
+      getData(e.target.parentElement)
+    }
   })
 }
 

@@ -3,6 +3,7 @@ import {getPokemon, pokemonList} from './modules/getPokemon.js';
 import showPopup, {closePopup}from './modules/comment-popup';
 import { addLike, getLike } from './modules/likes.js'
 
+
 pokemonList.forEach((pokemon, index) => {
     getPokemon(pokemon, index)
     addLike(index)
@@ -12,3 +13,5 @@ pokemonList.forEach((pokemon, index) => {
 
 showPopup()
 closePopup()
+
+
