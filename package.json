@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/stephenkati/JavaScript-capstone-group-project#readme",
   "dependencies": {
-    "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"
   },
   "devDependencies": {
@@ -31,6 +30,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.5.0",
     "style-loader": "^3.3.1",
+    "webpack": "^5.76.1",
     "webpack-dev-server": "^4.11.1"
   }
 }
