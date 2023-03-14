@@ -1,5 +1,4 @@
 import {involvementAPIURL, appId} from './setup-involvementAPi.js'
-import { pokemonList } from './getPokemon.js';
 
 const addLike = async (index) => {
     const response = await fetch(`${involvementAPIURL}${appId}/likes`, {
