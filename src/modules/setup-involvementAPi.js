@@ -12,7 +12,6 @@ const createApp = async () => {
     });
 
     const data = await response.text()
-    console.log(data)
 }
 
 // createApp();
