@@ -34,3 +34,11 @@ export default () => {
     getData(e.target.parentElement)
   })
 }
+
+const closePopup = () => {
+  document.querySelector('body').addEventListener('click', (e) => {
+    if (e.target.id ==='close-btn') {
+      e.target.parentElement.parentElement.remove();
+    }
+  })
+} 
