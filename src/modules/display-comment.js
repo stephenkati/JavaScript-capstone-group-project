@@ -49,3 +49,13 @@ const getComment = async (index) => {
   populateComment(data)
 
 }
+
+export default () => {
+  document.querySelector('#cardLayout').addEventListener('click', (e) => {
+    if(e.target.textContent === 'Comment') {
+      getComment(e.target.parentElement.id)
+    }
+  })
+}
+
+export { addComment, getComment }
