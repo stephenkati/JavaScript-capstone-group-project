@@ -34,3 +34,18 @@ body {
   color: black;
 }
 
+.cardLayout {
+  padding: 2em 10em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 20%;
+  min-width: 200px;
+}
