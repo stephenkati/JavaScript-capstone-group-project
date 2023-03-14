@@ -21,3 +21,10 @@ const commentPopup = (data) => {
   `
   body.appendChild(commentPopup)
 } 
+
+const get = async (target) => {
+  const pokemon = target.children[0].alt
+  const response = await fetch(`${pokeAPI}${pokemon}`)
+  const data = await response.json()
+  commentPopup(data)
+}
