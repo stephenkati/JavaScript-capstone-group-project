@@ -79,10 +79,20 @@ In order to run this project you need:
 
 Clone this repository to your desired folder: (https://github.com/stephenkati/JavaScript-capstone-group-project/tree/dev)
 
+
 ```sh
   cd my-folder
   git clone https://github.com/stephenkati/JavaScript-capstone-group-project/tree/dev
 ```
+
+setup webpack : 
+run the codes bellow from you bash
+
+- `npm install webpack webpack-cli --save-dev`
+- `npm install --save-dev style-loader css-loader`
+- `npm install --save-dev html-webpack-plugin`
+- `npm install --save-dev webpack-dev-server`          
+
 
 ### Install
 
