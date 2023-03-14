@@ -33,3 +33,19 @@ const populateComment = (data) => {
   
   cardPopup.appendChild(commentSection)
 } 
+
+
+const getComment = async (index) => {
+  const response = await fetch(`${involvementAPIURL}${appId}/comments?item_id=${index}`, {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+
+  });
+
+  const data = await response.json();
+  console.log(data)
+  populateComment(data)
+
+}
