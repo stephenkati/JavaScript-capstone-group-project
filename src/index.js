@@ -1,7 +1,8 @@
 import './style.css';
 import {getPokemon, pokemonList} from './modules/getPokemon.js';
-import showPopup, {closePopup}from './modules/comment-popup';
+import showPopup, {closePopup}from './modules/comment-popup.js';
 import { addLike, getLike } from './modules/likes.js'
+import callComment from './modules/display-comment.js';
 
 const onLoad =(() => { 
     pokemonList.forEach((pokemon, index) => {
@@ -22,3 +23,5 @@ document.querySelector('#cardLayout').addEventListener('click', (e) => {
 
 showPopup()
 closePopup()
+
+callComment()
