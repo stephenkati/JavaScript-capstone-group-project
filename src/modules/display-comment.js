@@ -33,6 +33,16 @@ const populateComment = (data) => {
     });
   }
   
+  commentSection.innerHTML += `<h2 class="popup-titles">add a comment</h2>
+  <form id="comments-form" method="post">
+      <input class="form-elm" type="text" name="username" id="user-name" placeholder="Your name" required>
+      <label for="user-name"></label></br>
+      <textarea class="form-elm" id="user-comment" name="usercomment" rows="4" cols="30" placeholder="Your insights" required></textarea>
+      <label for="user-comment"></label></br>
+      <button class="form-elm" id="submit-btn" type="submit">Comment</button>
+  </form>
+  `
+
   cardPopup.appendChild(commentSection)
 } 
 
