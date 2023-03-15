@@ -1,4 +1,5 @@
 import {involvementAPIURL, appId} from './setup-involvementAPi.js'
+import { countComment, printComment } from './commentCounter.js';
 
 const addComment = async (id, username, comment) => {
     const response = await fetch(`${involvementAPIURL}${appId}/comments`, {
@@ -46,15 +47,6 @@ const populateComment = (data, index) => {
   cardPopup.appendChild(commentSection)
 } 
 
-const countComment = (parentNode) => {
-  const number = parentNode.childElementCount-3
-  return number
-}
-
-const printComment = (number) => {
-  const commentTitle = document.getElementById('comment-title')
-  commentTitle.innerHTML = `Comments(${number})`
-}
 
 const getComment = async (index) => {
   const response = await fetch(`${involvementAPIURL}${appId}/comments?item_id=${index}`, {
@@ -85,4 +77,4 @@ export default () => {
   })
 }
 
-export { addComment, getComment }
+export { addComment, getComment, countComment, printComment}
