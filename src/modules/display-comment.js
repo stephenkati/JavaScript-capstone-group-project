@@ -1,15 +1,15 @@
 import {involvementAPIURL, appId} from './setup-involvementAPi.js'
 
-const addComment = async () => {
+const addComment = async (id, username, comment) => {
     const response = await fetch(`${involvementAPIURL}${appId}/comments`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            item_id: '1',
-            username: "peter",
-            comment: "nice to meet you"
+          item_id: id,
+          username: username,
+          comment: comment,
         }),
     });
 
@@ -17,11 +17,12 @@ const addComment = async () => {
     return data;
 }
 
-const populateComment = (data) => {
+const populateComment = (data, index) => {
 
   const cardPopup = document.querySelector('.card-popup')
   const commentSection = document.createElement('div')
-  commentSection.className = '.comments'
+  commentSection.className = 'comments'
+  commentSection.id = `comment-${index}`
   commentSection.innerHTML = `<h2>Comments(0)</h2>`
   if (data) {
     data.forEach((element) => {
@@ -33,6 +34,16 @@ const populateComment = (data) => {
     });
   }
   
+  commentSection.innerHTML += `<h2 class="popup-titles">add a comment</h2>
+  <form id="comments-form" method="post">
+      <input class="form-elm" type="text" name="username" id="user-name" placeholder="Your name" required>
+      <label for="user-name"></label></br>
+      <textarea class="form-elm" id="user-comment" name="usercomment" rows="4" cols="30" placeholder="Your insights" required></textarea>
+      <label for="user-comment"></label></br>
+      <button class="form-elm" id="submit-btn" type="submit">Comment</button>
+  </form>
+  `
+
   cardPopup.appendChild(commentSection)
 } 
 
@@ -50,7 +61,7 @@ const getComment = async (index) => {
   if(data.error) {
     populateComment([])
   }
-  populateComment(data)
+  populateComment(data, index)
 
 }
 
