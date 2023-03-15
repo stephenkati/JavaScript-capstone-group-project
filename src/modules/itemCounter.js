@@ -1,12 +1,11 @@
 import { pokemonList } from './getPokemon.js';
 
-let pokemonNumber = '';
 
 const countItems = () => {
-    pokemonNumber = pokemonList.length;
+    let pokemonNumber = pokemonList.length;
     const itemCounter = document.querySelector('#pokeCounter');
-    itemCounter.innerHTML = `Pokemons (${pokemonNumber})`
-    console.log(pokemonList.length)
+    itemCounter.innerHTML = `Pokemons (${pokemonNumber})`;
+    return pokemonNumber;
 }
 
 export { countItems }
