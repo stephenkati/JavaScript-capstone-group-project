@@ -13,7 +13,7 @@ const createApp = async () => {
 
     const data = await response.text()
 }
-
+createApp();
 const appId = '4eLu84EDG8YaXWuL7mOL';
 
 export {involvementAPIURL, appId}
