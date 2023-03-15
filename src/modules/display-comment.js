@@ -17,11 +17,12 @@ const addComment = async (id, username, comment) => {
     return data;
 }
 
-const populateComment = (data) => {
+const populateComment = (data, index) => {
 
   const cardPopup = document.querySelector('.card-popup')
   const commentSection = document.createElement('div')
-  commentSection.className = '.comments'
+  commentSection.className = 'comments'
+  commentSection.id = `comment-${index}`
   commentSection.innerHTML = `<h2>Comments(0)</h2>`
   if (data) {
     data.forEach((element) => {
@@ -60,7 +61,7 @@ const getComment = async (index) => {
   if(data.error) {
     populateComment([])
   }
-  populateComment(data)
+  populateComment(data, index)
 
 }
 

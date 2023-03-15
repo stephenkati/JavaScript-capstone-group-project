@@ -1,7 +1,7 @@
 import { addComment } from "./display-comment";
 import { getComment } from "./display-comment";
 
-const sendComment = () => {
+export default () => {
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id === 'submit-btn') {
         document.querySelector('#comments-form').addEventListener('submit', (event) => {
@@ -11,14 +11,12 @@ const sendComment = () => {
             const comment = document.getElementById('user-comment').value;
             if (username !== '') {
               addComment(id, username, comment)
-              getComment(event.target.parentElement.parentElement.
-                id[5])
+              setTimeout( () =>{
+                document.querySelector('.comments').remove()
+                getComment(event.target.parentElement.id[8])},
+                1000)
             }
-            document.getElementById('user-name').value =''
-            document.getElementById('user-comment').value = ''
         })
-    } 
+    }     
 })
 }
-
-export {sendComment}

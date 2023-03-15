@@ -4,6 +4,7 @@ import showPopup, {closePopup}from './modules/comment-popup.js';
 import { addLike, getLike } from './modules/likes.js'
 import callComment from './modules/display-comment.js';
 import { countItems } from './modules/itemCounter.js';
+import newComment from './modules/newComment';
 
 const onLoad =(() => { 
     const cardLayout = document.querySelector('#cardLayout');
@@ -30,3 +31,5 @@ closePopup()
 callComment()
 
 countItems()
+
+newComment()
