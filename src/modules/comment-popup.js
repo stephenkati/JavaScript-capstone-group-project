@@ -9,7 +9,7 @@ const commentPopup = (data, index) => {
   commentPopup.innerHTML = `
   <div class="card-popup" id="card-${index}">
   <i id=close-btn class="fa-regular fa-x"></i>
-    <img src=${data.sprites.front_default} alt=${data.name}>
+    <img src=${data.sprites.other.dream_world.front_default} alt=${data.name}>
     <h2 class="pokemonTitle" > ${data.name} </h2>
     <div id="pokemonInfos">
       <p class="pokemonInfo" >Base experience : ${data.base_experience}</p>
