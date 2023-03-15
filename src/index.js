@@ -3,8 +3,11 @@ import {getPokemon, pokemonList} from './modules/getPokemon.js';
 import showPopup, {closePopup}from './modules/comment-popup.js';
 import { addLike, getLike } from './modules/likes.js'
 import callComment from './modules/display-comment.js';
+import { countItems } from './modules/itemCounter.js';
 
 const onLoad =(() => { 
+    const cardLayout = document.querySelector('#cardLayout');
+    cardLayout.innerHTML = ``
     pokemonList.forEach((pokemon, index) => {
     getPokemon(pokemon, index)
     getLike(index)
@@ -25,3 +28,5 @@ showPopup()
 closePopup()
 
 callComment()
+
+countItems()
