@@ -1,13 +1,13 @@
 const pokeAPI = 'https://pokeapi.co/api/v2/pokemon/'
 
-const commentPopup = (data) => {
+const commentPopup = (data, index) => {
 
   const body = document.querySelector('body')
   const commentPopup = document.createElement('div')
   commentPopup.id = 'popup-window'
   
   commentPopup.innerHTML = `
-  <div class="card-popup" id="card-${0}">
+  <div class="card-popup" id="card-${index}">
   <i id=close-btn class="fa-regular fa-x"></i>
     <img src=${data.sprites.front_default} alt=${data.name}>
     <h2 class="pokemonTitle" > ${data.name} </h2>
@@ -26,7 +26,8 @@ const getData = async (target) => {
   const pokemon = target.children[0].alt
   const response = await fetch(`${pokeAPI}${pokemon}`)
   const data = await response.json()
-  commentPopup(data)
+  const index = target.id
+  commentPopup(data, index)
 }
 
 export default () => {
