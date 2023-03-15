@@ -112,7 +112,7 @@ launch the index.html file with your desired browser
 
 ### Deployment
 
-You can deploy this project using: a GitHub Page
+click this [link](https://stephenkati.github.io/JavaScript-capstone-group-project/dist/) to see deployed app.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -121,12 +121,19 @@ You can deploy this project using: a GitHub Page
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Author 1**
  *SENOU Kodjo Matthieu*
  
 - GitHub: [@Matthieu96Code](https://https://github.com/Matthieu96Code)
 - Twitter: [@MatthieuSENOU](https://https://twitter.com/MatthieuSenou)
 - LinkedIn: [Kodjo Matthieu SENOU](https://https://www.linkedin.com/in/kodjo-matthieu-senou-724a50210/)
+
+👤 **Author 2**
+ * Stephen Katuli *
+ 
+- GitHub: [@stephenkati](https://github.com/stephenkati)
+- Twitter: [@Stephen57913145](twitter.com/Stephen57913145)
+- LinkedIn: [Stephen (Wambua) Katuli](https://www.linkedin.com/in/stephen-katuli/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
