@@ -1,15 +1,15 @@
 import {involvementAPIURL, appId} from './setup-involvementAPi.js'
 
-const addComment = async () => {
+const addComment = async (id, username, comment) => {
     const response = await fetch(`${involvementAPIURL}${appId}/comments`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            item_id: '1',
-            username: "peter",
-            comment: "nice to meet you"
+          item_id: id,
+          username: username,
+          comment: comment,
         }),
     });
 
