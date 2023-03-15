@@ -7,12 +7,13 @@ const getPokemon = async (pokemon, index) => {
     const cardLayout = document.querySelector('#cardLayout');
     cardLayout.innerHTML += `
         <div class="card" id="${index}">
-            <img src=${data.sprites.front_default} alt=${data.name}>
-            <p class="pokemonTitle" > ${data.name} </p>
-            <i class="fa-regular fa-heart" id='heartIcon-${index}'></i>
-            <p id='likes-${index}' >0 likes</p>
-            <button>Comment</button>
-            <button>Reservations</button>
+            <img src=${data.sprites.other.dream_world.front_default} alt=${data.name}>
+            <div class="cardContent">
+                <p class="pokemonTitle" > ${data.name} </p>
+                <i class="fa-regular fa-heart" id='heartIcon-${index}'></i>
+                <p id='likes-${index}' class="likes">0 likes</p>
+            </div>
+            <button class="commentBtn">Comment</button>
         </div>
     `
 }
