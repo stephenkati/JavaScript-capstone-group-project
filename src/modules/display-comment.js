@@ -23,7 +23,7 @@ const populateComment = (data, index) => {
   const commentSection = document.createElement('div')
   commentSection.className = 'comments'
   commentSection.id = `comment-${index}`
-  commentSection.innerHTML = `<h2>Comments(0)</h2>`
+  commentSection.innerHTML = `<h2 id="comment-title"></h2>`
   if (data) {
     data.forEach((element) => {
       commentSection.innerHTML += `
@@ -33,7 +33,6 @@ const populateComment = (data, index) => {
         `
     });
   }
-  
   commentSection.innerHTML += `<h2 class="popup-titles">add a comment</h2>
   <form id="comments-form" method="post">
       <input class="form-elm" type="text" name="username" id="user-name" placeholder="Your name" required>
@@ -47,6 +46,15 @@ const populateComment = (data, index) => {
   cardPopup.appendChild(commentSection)
 } 
 
+const countComment = (parentNode) => {
+  const number = parentNode.childElementCount-3
+  return number
+}
+
+const printComment = (number) => {
+  const commentTitle = document.getElementById('comment-title')
+  commentTitle.innerHTML = `Comments(${number})`
+}
 
 const getComment = async (index) => {
   const response = await fetch(`${involvementAPIURL}${appId}/comments?item_id=${index}`, {
@@ -61,7 +69,11 @@ const getComment = async (index) => {
   if(data.error) {
     populateComment([])
   }
-  populateComment(data, index)
+  populateComment(data, index,)
+
+  const CommentsNode = document.querySelector('.comments')
+  const commentNb = countComment(CommentsNode)
+  printComment(commentNb)
 
 }
 
