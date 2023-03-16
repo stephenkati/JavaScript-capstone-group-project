@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { countItems } from './itemCounter.js';
+import countItems from './itemCounter.js';
 
 document.body.innerHTML = `
     <div class="container">
@@ -20,22 +20,21 @@ document.body.innerHTML = `
     </div>
 
     </div>
-`
-    describe('test cases for item counter', () => {
+`;
+describe('test cases for item counter', () => {
+  test('length of items to be 0', () => {
+    countItems();
 
-        test('length of items to be 0', () => { 
-            countItems()
+    const pokemonNumber = document.querySelectorAll('.card').length;
 
-            let pokemonNumber = document.querySelectorAll('.card').length;
+    expect(pokemonNumber).toBe(0);
+  });
 
-            expect(pokemonNumber).toBe(0);
-        })
+  test('length of items to be 4', () => {
+    countItems();
 
-        test('length of items to be 4', () => { 
-            countItems()
-
-            const cardLayout = document.querySelector('#cardLayout');
-            cardLayout.innerHTML = `
+    const cardLayout = document.querySelector('#cardLayout');
+    cardLayout.innerHTML = `
                 <div class="card" id="index-1">
                     <div class="cardContent">
                         <p class="pokemonTitle" > data.name </p>
@@ -68,10 +67,10 @@ document.body.innerHTML = `
                     </div>
                     <button class="commentBtn">Comment</button>
                 </div>
-            `
+            `;
 
-            let pokemonNumber = document.querySelectorAll('.card').length;
+    const pokemonNumber = document.querySelectorAll('.card').length;
 
-            expect(pokemonNumber).toBe(4);
-        })
-    })
+    expect(pokemonNumber).toBe(4);
+  });
+});

@@ -1,11 +1,11 @@
-const pokeAPI = 'https://pokeapi.co/api/v2/pokemon/'
-const pokemonList = ['pikachu', 'squirtle', 'dragonite', 'eevee', 'bulbasaur', 'arcanine']
+const pokeAPI = 'https://pokeapi.co/api/v2/pokemon/';
+const pokemonList = ['pikachu', 'squirtle', 'dragonite', 'eevee', 'bulbasaur', 'arcanine'];
 
 const getPokemon = async (pokemon, index) => {
-    const response = await fetch(`${pokeAPI}${pokemon}`)
-    const data = await response.json()
-    const cardLayout = document.querySelector('#cardLayout');
-    cardLayout.innerHTML += `
+  const response = await fetch(`${pokeAPI}${pokemon}`);
+  const data = await response.json();
+  const cardLayout = document.querySelector('#cardLayout');
+  cardLayout.innerHTML += `
         <div class="card" id="${index}">
             <img src=${data.sprites.other.dream_world.front_default} alt=${data.name}>
             <div class="cardContent">
@@ -15,7 +15,7 @@ const getPokemon = async (pokemon, index) => {
             </div>
             <button class="commentBtn">Comment</button>
         </div>
-    `
-}
+    `;
+};
 
-export {getPokemon, pokemonList}
+export { getPokemon, pokemonList };

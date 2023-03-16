@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(148, 185, 11);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 185, 11, 0.527);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Oswald', sans-serif;
-  background-color: #02735E;
+  background-color: #02735e;
 }
 
 .container {
@@ -17,10 +35,10 @@ body {
   display: flex;
   gap: 2em;
   align-items: center;
-  margin-left: 15em;
+  justify-content: center;
 }
 
-.logo img{
+.logo img {
   width: 150px;
   height: 150px;
   object-fit: contain;
@@ -67,12 +85,12 @@ body {
   position: relative;
   font-size: 18px;
   text-transform: capitalize;
-  color: #F27405;
+  color: #f27405;
 }
 
 .card img {
- height: 200px;
- width: 200px;
+  height: 200px;
+  width: 200px;
 }
 
 .cardContent .fa-heart {
@@ -81,6 +99,11 @@ body {
   right: 1em;
   font-size: 23px;
   color: rgb(148, 185, 11);
+}
+
+.cardContent .fa-heart:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .cardContent .likes {
@@ -95,23 +118,22 @@ body {
   color: #731702;
   font-size: 20px;
   margin: 10px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 .commentBtn:hover {
   background-color: white;
-  color: #F27405;
-  border: 1.5px solid #F27405;
+  color: #f27405;
+  border: 1.5px solid #f27405;
   font-size: 18.5px;
 }
-
 
 #popup-window {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
-  background-color: #F27405;
+  background-color: #f27405;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,20 +159,20 @@ body {
   overflow: auto;
 }
 
-.card-popup .pokemonTitle{
+.card-popup .pokemonTitle {
   font-size: 28px;
-  color: #F27405;
+  color: #f27405;
   text-transform: capitalize;
 }
 
-.card-popup img{
+.card-popup img {
   width: 30%;
   border: none;
 }
 
 .pokemonInfo {
   font-size: 18px;
-  color:  rgb(148, 185, 11);
+  color: rgb(148, 185, 11);
 }
 
 #pokemonInfos {
@@ -162,7 +184,7 @@ body {
 }
 
 .comments h2 {
-  color: #F27405;
+  color: #f27405;
 }
 
 .comments p {
@@ -190,7 +212,7 @@ textarea {
   border: none;
   font-size: 18px;
   color: #731702;
-  background-color:rgb(148, 185, 11);
+  background-color: rgb(148, 185, 11);
   width: 75%;
   height: 30px;
   margin-bottom: 1em;
@@ -200,5 +222,5 @@ textarea {
   border: 1px solid rgb(148, 185, 11);
   font-size: 18px;
   color: rgb(148, 185, 11);
-  background-color:#731702;
+  background-color: #731702;
 }

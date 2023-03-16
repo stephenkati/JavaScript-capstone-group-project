@@ -1,11 +1,10 @@
-const pokeAPI = 'https://pokeapi.co/api/v2/pokemon/'
+const pokeAPI = 'https://pokeapi.co/api/v2/pokemon/';
 
 const commentPopup = (data, index) => {
+  const body = document.querySelector('body');
+  const commentPopup = document.createElement('div');
+  commentPopup.id = 'popup-window';
 
-  const body = document.querySelector('body')
-  const commentPopup = document.createElement('div')
-  commentPopup.id = 'popup-window'
-  
   commentPopup.innerHTML = `
   <div class="card-popup" id="card-${index}">
   <i id=close-btn class="fa-regular fa-x"></i>
@@ -18,32 +17,32 @@ const commentPopup = (data, index) => {
       <p class="pokemonInfo" >Weight : ${data.weight}</p>
     </div>
   </div>
-  `
-  body.appendChild(commentPopup)
-} 
+  `;
+  body.appendChild(commentPopup);
+};
 
 const getData = async (target) => {
-  const pokemon = target.children[0].alt
-  const response = await fetch(`${pokeAPI}${pokemon}`)
-  const data = await response.json()
-  const index = target.id
-  commentPopup(data, index)
-}
+  const pokemon = target.children[0].alt;
+  const response = await fetch(`${pokeAPI}${pokemon}`);
+  const data = await response.json();
+  const index = target.id;
+  commentPopup(data, index);
+};
 
 export default () => {
   document.querySelector('#cardLayout').addEventListener('click', (e) => {
     if (e.target.textContent === 'Comment') {
-      getData(e.target.parentElement)
+      getData(e.target.parentElement);
     }
-  })
-}
+  });
+};
 
 const closePopup = () => {
   document.querySelector('body').addEventListener('click', (e) => {
-    if (e.target.id ==='close-btn') {
+    if (e.target.id === 'close-btn') {
       e.target.parentElement.parentElement.remove();
     }
-  })
-} 
+  });
+};
 
-export {closePopup}
+export { closePopup };
