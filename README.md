@@ -129,7 +129,7 @@ The project is deployed [here](https://stephenkati.github.io/JavaScript-capstone
 - LinkedIn: [Kodjo Matthieu SENOU](https://https://www.linkedin.com/in/kodjo-matthieu-senou-724a50210/)
 
 👤 **Author 2**
- * Stephen Katuli *
+ *Stephen Katuli*
  
 - GitHub: [@stephenkati](https://github.com/stephenkati)
 - Twitter: [@Stephen57913145](https://twitter.com/Stephen57913145)
