@@ -20,6 +20,7 @@
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
+- [Presentation](#presentation)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -58,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- To see the live demo click [here](https://stephenkati.github.io/JavaScript-capstone-group-project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,7 +113,7 @@ launch the index.html file with your desired browser
 
 ### Deployment
 
-The project is deployed [here](https://stephenkati.github.io/JavaScript-capstone-group-project/)
+The project is deployed [here](https://stephenkati.github.io/JavaScript-capstone-group-project/dist/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -146,6 +147,12 @@ The project is deployed [here](https://stephenkati.github.io/JavaScript-capstone
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- PRESENTATION -->
+
+## Presentation <a name="presentation"></a>
+
+The project was presentated by both contributors. Click [here](https://drive.google.com/file/d/1aKgcJvKIcO3KMpy4SRqAvIWxJvGImeGu/view?usp=sharing) to see the video presentation.
 
 <!-- CONTRIBUTING -->
 
