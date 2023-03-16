@@ -2,14 +2,12 @@
  * @jest-environment jsdom
  */
 
-import { countComment } from "./commentCounter.js";
+import { countComment } from './commentCounter.js';
 
 describe('countComment', () => {
-
-    test('should return the numberof the comments', () => {
-
-        const parentNode = document.createElement('div');
-        parentNode.innerHTML = `
+  test('should return the numberof the comments', () => {
+    const parentNode = document.createElement('div');
+    parentNode.innerHTML = `
         <h2 id="comment-title"></h2>
         
 
@@ -18,16 +16,14 @@ describe('countComment', () => {
         </form>
         `;
 
-        const result = countComment(parentNode);
-        
-        expect(result).toBe(0);
-    });
+    const result = countComment(parentNode);
 
+    expect(result).toBe(0);
+  });
 
-    test('should return the numberof the comments', () => {
-
-        const parentNode = document.createElement('div');
-        parentNode.innerHTML = `
+  test('should return the numberof the comments', () => {
+    const parentNode = document.createElement('div');
+    parentNode.innerHTML = `
         <h2 id="comment-title"></h2>
 
         <p>2023-03-14 Mike : Hello micronaut!</p>
@@ -39,9 +35,8 @@ describe('countComment', () => {
         </form>
         `;
 
-        const result = countComment(parentNode);
-        
-        expect(result).toBe(3);
-    });
+    const result = countComment(parentNode);
 
+    expect(result).toBe(3);
+  });
 });
