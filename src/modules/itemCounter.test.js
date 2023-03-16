@@ -21,12 +21,57 @@ document.body.innerHTML = `
 
     </div>
 `
+    describe('test cases for item counter', () => {
 
+        test('length of items to be 0', () => { 
+            countItems()
 
-test('length of items to be 6', () => { 
+            let pokemonNumber = document.querySelectorAll('.card').length;
 
-    countItems()
+            expect(pokemonNumber).toBe(0);
+        })
 
-    expect(countItems()).toBe(6);
+        test('length of items to be 4', () => { 
+            countItems()
 
-})
+            const cardLayout = document.querySelector('#cardLayout');
+            cardLayout.innerHTML = `
+                <div class="card" id="index-1">
+                    <div class="cardContent">
+                        <p class="pokemonTitle" > data.name </p>
+                        <i class="fa-regular fa-heart" id='heartIcon-index'></i>
+                        <p id='likes-index' class="likes">0 likes</p>
+                    </div>
+                    <button class="commentBtn">Comment</button>
+                </div>
+                <div class="card" id="index-2">
+                    <div class="cardContent">
+                        <p class="pokemonTitle" > data.name </p>
+                        <i class="fa-regular fa-heart" id='heartIcon-index'></i>
+                        <p id='likes-index' class="likes">0 likes</p>
+                    </div>
+                    <button class="commentBtn">Comment</button>
+                </div>
+                <div class="card" id="index-3">
+                    <div class="cardContent">
+                        <p class="pokemonTitle" > data.name </p>
+                        <i class="fa-regular fa-heart" id='heartIcon-index'></i>
+                        <p id='likes-index' class="likes">0 likes</p>
+                    </div>
+                    <button class="commentBtn">Comment</button>
+                </div>
+                <div class="card" id="index-4">
+                    <div class="cardContent">
+                        <p class="pokemonTitle" > data.name </p>
+                        <i class="fa-regular fa-heart" id='heartIcon-index'></i>
+                        <p id='likes-index' class="likes">0 likes</p>
+                    </div>
+                    <button class="commentBtn">Comment</button>
+                </div>
+            `
+
+            let pokemonNumber = document.querySelectorAll('.card').length;
+
+            expect(pokemonNumber).toBe(4);
+        })
+    })
