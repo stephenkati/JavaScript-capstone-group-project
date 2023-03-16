@@ -1,4 +1,5 @@
 import {involvementAPIURL, appId} from './setup-involvementAPi.js'
+import { countComment, printComment } from './commentCounter.js';
 
 const addComment = async (id, username, comment) => {
     const response = await fetch(`${involvementAPIURL}${appId}/comments`, {
@@ -23,7 +24,7 @@ const populateComment = (data, index) => {
   const commentSection = document.createElement('div')
   commentSection.className = 'comments'
   commentSection.id = `comment-${index}`
-  commentSection.innerHTML = `<h2>Comments(0)</h2>`
+  commentSection.innerHTML = `<h2 id="comment-title"></h2>`
   if (data) {
     data.forEach((element) => {
       commentSection.innerHTML += `
@@ -33,7 +34,6 @@ const populateComment = (data, index) => {
         `
     });
   }
-  
   commentSection.innerHTML += `<h2 class="popup-titles">add a comment</h2>
   <form id="comments-form" method="post">
       <input class="form-elm" type="text" name="username" id="user-name" placeholder="Your name" required>
@@ -61,7 +61,11 @@ const getComment = async (index) => {
   if(data.error) {
     populateComment([])
   }
-  populateComment(data, index)
+  populateComment(data, index,)
+
+  const CommentsNode = document.querySelector('.comments')
+  const commentNb = countComment(CommentsNode)
+  printComment(commentNb)
 
 }
 
@@ -73,4 +77,4 @@ export default () => {
   })
 }
 
-export { addComment, getComment }
+export { addComment, getComment, countComment, printComment}
