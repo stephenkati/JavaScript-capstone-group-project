@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(148, 185, 11);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 185, 11, 0.527);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  background-color: #02735e;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+}
+
+.header {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.header ul {
+  display: flex;
+  gap: 3em;
+  list-style: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
+.cardLayout {
+  padding: 2em 6em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 30%;
+  min-width: 200px;
+  background-color: #014040;
+  overflow: hidden;
+}
+
+.cardContent {
+  width: 80%;
+  height: 100px;
+  margin: 0;
+  padding: 0 2em;
+  position: relative;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #f27405;
+}
+
+.card img {
+  height: 200px;
+  width: 200px;
+}
+
+.cardContent .fa-heart {
+  position: absolute;
+  top: 20px;
+  right: 1em;
+  font-size: 23px;
+  color: rgb(148, 185, 11);
+}
+
+.cardContent .fa-heart:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.cardContent .likes {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+}
+
+.commentBtn {
+  border: none;
+  background-color: rgb(148, 185, 11);
+  color: #731702;
+  font-size: 20px;
+  margin: 10px;
+  padding: 0.5em 1em;
+}
+
+.commentBtn:hover {
+  background-color: white;
+  color: #f27405;
+  border: 1.5px solid #f27405;
+  font-size: 18.5px;
+}
+
+#popup-window {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f27405;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#close-btn {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.card-popup {
+  width: 90%;
+  height: 90%;
+  background-color: #014040;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.card-popup .pokemonTitle {
+  font-size: 28px;
+  color: #f27405;
+  text-transform: capitalize;
+}
+
+.card-popup img {
+  width: 30%;
+  border: none;
+}
+
+.pokemonInfo {
+  font-size: 18px;
+  color: rgb(148, 185, 11);
+}
+
+#pokemonInfos {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20%;
+  justify-content: center;
+}
+
+.comments h2 {
+  color: #f27405;
+}
+
+.comments p {
+  color: white;
+}
+
+#comments-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 95%;
+  height: 30px;
+}
+
+textarea {
+  width: 95%;
+  height: 100px;
+}
+
+#submit-btn {
+  border: none;
+  font-size: 18px;
+  color: #731702;
+  background-color: rgb(148, 185, 11);
+  width: 75%;
+  height: 30px;
+  margin-bottom: 1em;
+}
+
+#submit-btn:hover {
+  border: 1px solid rgb(148, 185, 11);
+  font-size: 18px;
+  color: rgb(148, 185, 11);
+  background-color: #731702;
+}
