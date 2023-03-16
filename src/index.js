@@ -17,6 +17,7 @@ const onLoad = (() => {
 onLoad();
 
 document.querySelector('#cardLayout').addEventListener('click', (e) => {
+  e.preventDefault();
   if (e.target.classList.contains('fa-heart')) {
     const index = parseInt(e.target.id[e.target.id.length - 1], 10);
     addLike(index);

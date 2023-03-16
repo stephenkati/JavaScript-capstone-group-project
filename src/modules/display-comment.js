@@ -23,7 +23,7 @@ const populateComment = (data, index) => {
   const commentSection = document.createElement('div');
   commentSection.className = 'comments';
   commentSection.id = `comment-${index}`;
-  commentSection.innerHTML = '<h2 id="comment-title"></h2>';
+  commentSection.innerHTML = '<h2 id="comment-title">Comment(0)</h2>';
   if (data) {
     data.forEach((element) => {
       commentSection.innerHTML += `
